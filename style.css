@@ -65,13 +65,13 @@ p{
 .gameCanvas{
     display: flex;
     flex-wrap: wrap;
-    width: 210px;
-    height: 420px;
+    width: 200px;
+    height: 400px;
 }   
 
 .gameSquare{
     background-color: var(--bgColorSquares);
-    border: 0.5px solid var(--borderSquares);
+    /*border: 0.5px solid var(--borderSquares);*/
     width: 20px;
     height: 20px;
 }
