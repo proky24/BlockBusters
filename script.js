@@ -6,7 +6,7 @@
     scoreParagraph.style.textDecoration = 'underline';
     highScoreParagraph.style.textDecoration = 'underline';
     let addscore = 0;
-    let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : 0;
+    let highScore = localStorage.getItem('highScore') ? (localStorage.getItem('highScore')) : 0;
    
     
     for(let i = 0; i <= 209; i++) {
@@ -205,7 +205,7 @@
                 if(addscore > highScore){
                     highScore = addscore;
                     highScoreParagraph.innerText = `HIGH SCORE: ` + `${highScore}`;
-                    localStorage.setItem('highScore', JSON.stringify(highScore));
+                    localStorage.setItem('highScore', highScore);
                 }
 
                 row.forEach(index => {
