@@ -6,7 +6,7 @@
     scoreParagraph.style.textDecoration = 'underline';
     highScoreParagraph.style.textDecoration = 'underline';
     let addscore = 0;
-    let highScore = localStorage.getItem('highScore');
+    let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : 0;
    
     
     for(let i = 0; i <= 209; i++) {
