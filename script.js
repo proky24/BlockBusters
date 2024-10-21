@@ -6,7 +6,7 @@
     scoreParagraph.style.textDecoration = 'underline';
     highScoreParagraph.style.textDecoration = 'underline';
     let addscore = 0;
-    let highScore = localStorage.getItem('highScore') ? (localStorage.getItem('highScore')) : 0;
+    /*let highScore = /*localStorage.getItem('highScore') ? (localStorage.getItem('highScore')) :*/ 0;
    
     
     for(let i = 0; i <= 209; i++) {
@@ -202,11 +202,11 @@
             if(row.every(index => gameSquares[index].classList.contains('taken'))) {
                 addscore += 10;
                 scoreParagraph.innerText = `SCORE: ` + `${addscore}`;
-                if(addscore > highScore){
+                /*if(addscore > highScore){
                     highScore = addscore;
                     highScoreParagraph.innerText = `HIGH SCORE: ` + `${highScore}`;
-                    localStorage.setItem('highScore', highScore);
-                }
+                    /*localStorage.setItem('highScore', highScore);
+                }*/
 
                 row.forEach(index => {
                     gameSquares[index].classList.remove('taken');
