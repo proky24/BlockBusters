@@ -1,10 +1,13 @@
-
     const gameCanvas = document.querySelector('.gameCanvas');
     const startButton = document.getElementById('start');
     let scoreParagraph = document.getElementById('score');
+    let highScoreParagraph = document.getElementById('highScore');
     scoreParagraph.innerText = `SCORE: 0`;
     scoreParagraph.style.textDecoration = 'underline';
+    highScoreParagraph.style.textDecoration = 'underline';
     let addscore = 0;
+    let highScore = localStorage.getItem('highScore');
+   
     
     for(let i = 0; i <= 209; i++) {
         if(i >= 200) {
@@ -199,6 +202,11 @@
             if(row.every(index => gameSquares[index].classList.contains('taken'))) {
                 addscore += 10;
                 scoreParagraph.innerText = `SCORE: ` + `${addscore}`;
+                if(addscore > highScore){
+                    highScore = addscore;
+                    highScoreParagraph.innerText = `HIGH SCORE: ` + `${highScore}`;
+                    localStorage.setItem('highScore', JSON.stringify(highScore));
+                }
 
                 row.forEach(index => {
                     gameSquares[index].classList.remove('taken');
